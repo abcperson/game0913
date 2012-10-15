@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <!-- 地图模块 -->
+	<item name="mapdata" type="0" src="map/data"/>
+	<item name="cube" type="1" src="assest/cube.png"/>
+	<item name="cube2" type="1" src="assest/cube2.png"/>
+	<item name="pad" type="1" src="assest/pad.png"/>
+	
+	
+</root>
