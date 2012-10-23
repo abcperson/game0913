@@ -35,6 +35,9 @@ package res {
 			}
 		}
 		
+		public static function getRes():ResInfo {
+			
+		}
 	}
 
 }
