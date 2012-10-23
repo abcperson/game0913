@@ -37,6 +37,8 @@ package {
 			_btn.move(100, 100);
 			addChild(_btn);
 			
+			//_btn.setSharedStyle
+			
 			_btn.addEventListener(MouseEvent.CLICK, onClick);
 		}
 		

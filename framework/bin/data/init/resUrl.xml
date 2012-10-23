@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<module name="init" preUrl="">
+		<item name="mapdata" type="0" url="map/data"/>
+		<item name="mapdata" type="0" url="map/data"/>
+	</module>
+	<module name="init" preUrl="">
+		<item name="mapdata" type="0" url="map/data"/>
+		<item name="mapdata" type="0" url="map/data"/>
+	</module>
+</data>
