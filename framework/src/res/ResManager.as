@@ -1,4 +1,5 @@
 package res {
+	import com.greensock.loading.LoaderMax;
 	import flash.utils.Dictionary;
 	/**
 	 * 管理UI资源
@@ -6,6 +7,9 @@ package res {
 	 * @author TJJTDS
 	 */
 	public class ResManager {
+		
+		private static var _mainLoader:LoaderMax = new LoaderMax( { maxConnections:4, onComplete:loadComplete, 
+				onChildComplete:childLoadComplete, onChildFail:childLoadedFail, onError:onError});	//整个游戏唯一Loader
 		
 		//全部资源的索引
 		private static var _resDic:Dictionary;
@@ -18,10 +22,10 @@ package res {
 			_resDic = new Dictionary();
 			
 			var xml:Object = InitConfigLoader.getConfig("resUrl.xml").content.data;
-			parseXML(xml);
+			parseResXML(xml);
 		}
 		
-		private static function parseXML(xml:Object):void {
+		private static function parseResXML(xml:Object):void {
 			var resInfo:ResInfo;
 			for each (var obj:Object in xml.module) {
 				_resDic[obj.name] = new Dictionary();
@@ -50,7 +54,23 @@ package res {
 			return _resDic[$mod][$name] as ResInfo;
 		}
 		
+		private static function childLoadComplete(evt:LoaderEvent):void {
+			trace("child loadComplete");
+		}
 		
+		private static function childLoadedFail(evt:LoaderEvent):void 
+		{
+			trace("child load fail");
+		}
+		
+		private static function loadComplete(evt:LoaderEvent):void {
+			trace("all loadComplete");
+			
+		}
+		
+		private static function onError(e:LoaderEvent):void {
+			trace("error");
+		}
 	}
 
 }

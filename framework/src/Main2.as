@@ -3,7 +3,7 @@ package  {
 	import flash.display.Sprite;
 	import flash.events.Event;
 	import res.InitConfigLoader;
-	import res.UIResManager;
+	import res.ResManager;
 	
 	/**
 	 * ...
@@ -30,7 +30,7 @@ package  {
 		
 		//初始化配置加载完成后  初始化资源加载器
 		private function onInitConfigLoad():void {
-			UIResManager.initRes();
+			ResManager.initRes();
 		}
 		
 	}
