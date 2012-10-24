@@ -35,9 +35,11 @@ package res {
 			}
 		}
 		
-		public static function getRes():ResInfo {
-			
+		public static function getRes($mod:String, $name:String):ResInfo {
+			return _resDic[$mod + "_" + $name];
 		}
+		
+		
 	}
 
 }
