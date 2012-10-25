@@ -1,4 +1,5 @@
 package res {
+	import com.greensock.events.LoaderEvent;
 	import com.greensock.loading.LoaderMax;
 	import flash.utils.Dictionary;
 	/**
@@ -12,7 +13,10 @@ package res {
 		private static var _mainLoader:LoaderMax = new LoaderMax( { maxConnections:4, onComplete:loadComplete, 
 				onChildComplete:childLoadComplete, onChildFail:childLoadedFail, onError:onError } );	//整个游戏唯一Loader
 		
-		
+		//辅助loader  被add到主loader，加载过程中显示加载进度
+		private static var _alertLoader:LoaderMax = new LoaderMax({onProgress:onAlertProgress, onComplete:onAlertComplete});
+				
+				
 		//全部资源的索引
 		private static var _resDic:Dictionary;
 		
@@ -49,7 +53,7 @@ package res {
 				throw new Error("使用不存在的资源");
 				return;
 			}
-			
+			info.loadRes($callBack);
 		}
 		
 		public static function getRes($mod:String, $name:String):ResInfo {
@@ -72,6 +76,21 @@ package res {
 		
 		private static function onError(e:LoaderEvent):void {
 			trace("error");
+		}
+		
+		//可见的加载进度显示
+		private static function onAlertProgress(e:LoaderEvent):void {
+			
+		}
+		
+		//可见的加载完成
+		private static function onAlertComplete(e:LoaderEvent):void {
+			
+		}
+		
+		//获取loader
+		public static function get mainLoader():LoaderMax {
+			return _mainLoader;
 		}
 	}
 
