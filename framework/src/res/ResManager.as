@@ -8,8 +8,10 @@ package res {
 	 */
 	public class ResManager {
 		
+		//主加载 Loader 用来加载全部资源
 		private static var _mainLoader:LoaderMax = new LoaderMax( { maxConnections:4, onComplete:loadComplete, 
-				onChildComplete:childLoadComplete, onChildFail:childLoadedFail, onError:onError});	//整个游戏唯一Loader
+				onChildComplete:childLoadComplete, onChildFail:childLoadedFail, onError:onError } );	//整个游戏唯一Loader
+		
 		
 		//全部资源的索引
 		private static var _resDic:Dictionary;
