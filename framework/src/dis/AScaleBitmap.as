@@ -2,17 +2,16 @@ package dis {
 	import flash.display.Bitmap;
 	import res.ResInfo;
 	import res.ResManager;
-	
 	/**
 	 * ...
 	 * @author TJJTDS
 	 */
-	public class ABitmap extends Bitmap {
+	public class AScaleBitmap extends ScaleBitmap {
 		
 		[Embed(source = "../test/default.jpg")]
 		private static var bmpClass:Class;
 		
-		public function ABitmap($mod:String, $resName:String) {
+		public function AScaleBitmap($mod:String, $resName:String) {
 			var bmp:Bitmap = new bmpClass();
 			super(bmp.bitmapData);
 			
@@ -28,7 +27,6 @@ package dis {
 			this.width = beforeWidth;
 			this.height = beforeHeight;
 		}
-		
 		
 	}
 

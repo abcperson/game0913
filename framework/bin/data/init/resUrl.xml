@@ -2,9 +2,9 @@
 <data>
 	<module name="init" preUrl="">
 		<item name="mapdata" type="0" url="map/data"/>
-		<item name="mapdata" type="0" url="map/data"/>
+		<item name="bmp" type="0" url="assets/bitmap.png"/>
 	</module>
-	<module name="init" preUrl="">
+	<module name="akb" preUrl="">
 		<item name="mapdata" type="0" url="map/data"/>
 		<item name="mapdata" type="0" url="map/data"/>
 	</module>

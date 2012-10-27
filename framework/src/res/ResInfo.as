@@ -35,16 +35,21 @@ package res {
 				if (imgLoader.status == LoaderStatus.LOADING || imgLoader.status == LoaderStatus.READY) {
 					_completeCallbacks.push($callBack);
 				}
+				return;
 			}
-			imgLoader = new ImageLoader(url, {onChildComplete:onResComplete});
-			
+			_completeCallbacks.push($callBack);
+			imgLoader = new ImageLoader(url, {onComplete:onResComplete});
+			ResManager.mainLoader.append(imgLoader);
+			ResManager.mainLoader.load();
 		}
 		
 		//资源加载完毕
 		private function onResComplete(e:LoaderEvent):void {
+			bmp = (e.target as ImageLoader).rawContent;
 			var fun:Function = _completeCallbacks.shift();
 			while (fun != null) {
 				fun(this);
+				fun = _completeCallbacks.shift();
 			}
 		}
 		
