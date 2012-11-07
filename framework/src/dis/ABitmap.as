@@ -20,13 +20,13 @@ package dis {
 		}
 		
 		private function onBmpLoaded($res:ResInfo):void {
-			var beforeWidth:int = this.width;
-			var beforeHeight:int = this.height;
+			//var beforeWidth:int = this.width;
+			//var beforeHeight:int = this.height;
 			this.scaleX  = 1;
 			this.scaleY = 1;
 			this.bitmapData = $res.bmp.bitmapData;
-			this.width = beforeWidth;
-			this.height = beforeHeight;
+			//this.width = beforeWidth;
+			//this.height = beforeHeight;
 		}
 		
 		

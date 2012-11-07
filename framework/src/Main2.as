@@ -35,20 +35,24 @@ package  {
 		private function onInitConfigLoad():void {
 			ResManager.initRes();
 			
-			//var bmp:ABitmap = new ABitmap("init", "bmp");
-			//bmp.x = 100;
-			//bmp.y = 100;
-			//_gameContainer.addChild(bmp);
-			
-			var bmp:AScaleBitmap = new AScaleBitmap("init", "bmp");
+			var bmp:ABitmap = new ABitmap("init", "bmp");
 			bmp.x = 100;
 			bmp.y = 100;
+			//bmp.width = 100;
+			//bmp.height = 100;
 			_gameContainer.addChild(bmp);
 			
-			//var panel:APanel = new APanel(100, 100);
-			//panel.x = 300;
-			//panel.y = 100;
-			//_gameContainer.addChild(panel);
+			var bmp2:AScaleBitmap = new AScaleBitmap("init", "bmp");
+			bmp2.x = 300;
+			bmp2.y = 100;
+			//bmp2.width = 100;
+			//bmp2.height = 100;
+			_gameContainer.addChild(bmp2);
+			
+			var panel:APanel = new APanel(100, 100);
+			panel.x = 500;
+			panel.y = 100;
+			_gameContainer.addChild(panel);
 		}
 		
 	}
