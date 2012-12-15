@@ -16,19 +16,19 @@
     </define>
     <define append="true">
       <name>CONFIG::timeStamp</name>
-      <value>'2012-10-15'</value>
+      <value>'2012/10/15'</value>
     </define>
     <verbose-stacktraces>true</verbose-stacktraces>
     <source-path append="true">
-      <path-element>F:\developSpace\game0913\src</path-element>
-      <path-element>F:\FlashDevelop\Library\AS3\classes</path-element>
+      <path-element>F:\game0913\game0913\src</path-element>
+      <path-element>d:\FlashDevelop\Library\AS3\classes</path-element>
     </source-path>
     <library-path append="true">
-      <path-element>F:\developSpace\game0913\lib\greensock.swc</path-element>
+      <path-element>F:\game0913\game0913\lib\greensock.swc</path-element>
     </library-path>
   </compiler>
   <file-specs>
-    <path-element>F:\developSpace\game0913\src\Main.as</path-element>
+    <path-element>F:\game0913\game0913\src\Main.as</path-element>
   </file-specs>
   <default-background-color>#FFFFFF</default-background-color>
   <default-frame-rate>24</default-frame-rate>
