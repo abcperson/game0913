@@ -1,0 +1,141 @@
+<report>
+  <scripts>
+    <script name="D:\AS3\flex_sdk_4.6\frameworks\libs\core.swc(mx.core:FlexBitmap)" mod="1303837772857" size="862" optimizedsize="537">
+      <def id="mx.core:FlexBitmap" />
+      <pre id="flash.display:Bitmap" />
+      <dep id="flash.display:BitmapData" />
+      <dep id="AS3" />
+      <dep id="mx.core:mx_internal" />
+      <dep id="Error" />
+      <dep id="mx.utils:NameUtil" />
+    </script>
+    <script name="D:\AS3\flex_sdk_4.6\frameworks\libs\core.swc(mx.core:IFlexDisplayObject)" mod="1303837773201" size="5949" optimizedsize="1339">
+      <def id="mx.core:IFlexDisplayObject" />
+      <pre id="flash.events:IEventDispatcher" />
+      <pre id="flash.display:IBitmapDrawable" />
+      <pre id="Object" />
+      <dep id="flash.accessibility:AccessibilityProperties" />
+      <dep id="AS3" />
+      <dep id="flash.geom:Rectangle" />
+      <dep id="flash.display:DisplayObjectContainer" />
+      <dep id="flash.display:DisplayObject" />
+      <dep id="flash.display:LoaderInfo" />
+      <dep id="flash.display:Stage" />
+      <dep id="flash.geom:Point" />
+      <dep id="flash.geom:Transform" />
+    </script>
+    <script name="D:\AS3\flex_sdk_4.6\frameworks\libs\core.swc(mx.core:IRepeaterClient)" mod="1303837771982" size="1114" optimizedsize="321">
+      <def id="mx.core:IRepeaterClient" />
+      <pre id="Object" />
+      <dep id="AS3" />
+    </script>
+    <script name="D:\AS3\flex_sdk_4.6\frameworks\libs\core.swc(mx.core:IFlexAsset)" mod="1303837773029" size="241" optimizedsize="98">
+      <def id="mx.core:IFlexAsset" />
+      <pre id="Object" />
+      <dep id="AS3" />
+    </script>
+    <script name="D:\AS3\flex_sdk_4.6\frameworks\locale\en_US\automation_agent_rb.swc(mx.core:mx_internal)" mod="1314174884728" size="182" optimizedsize="109">
+      <def id="mx.core:mx_internal" />
+      <dep id="AS3" />
+    </script>
+    <script name="GameLib_testA.as" mod="1354431114540" size="400" optimizedsize="264">
+      <def id="GameLib_testA" />
+      <pre id="mx.core:BitmapAsset" />
+      <dep id="AS3" />
+    </script>
+    <script name="D:\AS3\flex_sdk_4.6\frameworks\libs\core.swc(mx.core:ILayoutDirectionElement)" mod="1303837772560" size="717" optimizedsize="239">
+      <def id="mx.core:ILayoutDirectionElement" />
+      <pre id="Object" />
+      <dep id="AS3" />
+    </script>
+    <script name="F:\game0913\modLoad\src\GameLib.as" mod="1354431360038" size="342" optimizedsize="205">
+      <def id="GameLib" />
+      <pre id="Object" />
+      <dep id="AS3" />
+      <dep id="GameLib_testB" />
+      <dep id="GameLib_testA" />
+    </script>
+    <script name="GameLib_testB.as" mod="1354431135646" size="400" optimizedsize="264">
+      <def id="GameLib_testB" />
+      <pre id="mx.core:BitmapAsset" />
+      <dep id="AS3" />
+    </script>
+    <script name="D:\AS3\flex_sdk_4.6\frameworks\libs\core.swc(mx.core:BitmapAsset)" mod="1303837772389" size="6920" optimizedsize="3795">
+      <def id="mx.core:BitmapAsset" />
+      <pre id="mx.core:IFlexAsset" />
+      <pre id="mx.core:FlexBitmap" />
+      <pre id="mx.core:ILayoutDirectionElement" />
+      <pre id="mx.core:IFlexDisplayObject" />
+      <dep id="flash.events:Event" />
+      <dep id="flash.display:BitmapData" />
+      <dep id="mx.core:IAssetLayoutFeatures" />
+      <dep id="AS3" />
+      <dep id="flash.display:DisplayObjectContainer" />
+      <dep id="Math" />
+      <dep id="mx.core:mx_internal" />
+      <dep id="flash.system:ApplicationDomain" />
+      <dep id="flash.geom:Point" />
+    </script>
+    <script name="D:\AS3\flex_sdk_4.6\frameworks\libs\core.swc(mx.core:IAssetLayoutFeatures)" mod="1303837772451" size="4450" optimizedsize="867">
+      <def id="mx.core:IAssetLayoutFeatures" />
+      <pre id="Object" />
+      <dep id="AS3" />
+      <dep id="flash.geom:Matrix" />
+      <dep id="flash.geom:Matrix3D" />
+    </script>
+    <script name="F:\game0913\modLoad\src\Main.as" mod="1354444511294" size="1527" optimizedsize="1139">
+      <def id="Main" />
+      <pre id="flash.display:Sprite" />
+      <dep id="flash.display:StageScaleMode" />
+      <dep id="flash.events:Event" />
+      <dep id="GameLib" />
+      <dep id="flash.net:URLRequest" />
+      <dep id="AS3" />
+      <dep id="flash.display:Loader" />
+      <dep id="flash.display:LoaderInfo" />
+      <dep id="flash.system:ApplicationDomain" />
+      <dep id="flash.system:LoaderContext" />
+      <dep id="flash.display:StageAlign" />
+    </script>
+    <script name="D:\AS3\flex_sdk_4.6\frameworks\libs\core.swc(mx.utils:NameUtil)" mod="1303837778779" size="1666" optimizedsize="1094">
+      <def id="mx.utils:NameUtil" />
+      <pre id="Object" />
+      <dep id="mx.core:IRepeaterClient" />
+      <dep id="SecurityError" />
+      <dep id="flash.utils:getQualifiedClassName" />
+      <dep id="AS3" />
+      <dep id="flash.display:DisplayObject" />
+      <dep id="mx.core:mx_internal" />
+    </script>
+  </scripts>
+  <external-defs>
+    <ext id="flash.system:ApplicationDomain" />
+    <ext id="flash.geom:Matrix" />
+    <ext id="flash.display:StageAlign" />
+    <ext id="AS3" />
+    <ext id="flash.geom:Matrix3D" />
+    <ext id="Error" />
+    <ext id="flash.display:DisplayObject" />
+    <ext id="flash.accessibility:AccessibilityProperties" />
+    <ext id="SecurityError" />
+    <ext id="flash.geom:Point" />
+    <ext id="flash.utils:getQualifiedClassName" />
+    <ext id="flash.display:StageScaleMode" />
+    <ext id="Math" />
+    <ext id="flash.display:Bitmap" />
+    <ext id="flash.events:Event" />
+    <ext id="flash.display:BitmapData" />
+    <ext id="flash.net:URLRequest" />
+    <ext id="flash.display:LoaderInfo" />
+    <ext id="flash.events:IEventDispatcher" />
+    <ext id="flash.geom:Rectangle" />
+    <ext id="flash.display:IBitmapDrawable" />
+    <ext id="Object" />
+    <ext id="flash.display:DisplayObjectContainer" />
+    <ext id="flash.display:Sprite" />
+    <ext id="flash.display:Loader" />
+    <ext id="flash.display:Stage" />
+    <ext id="flash.system:LoaderContext" />
+    <ext id="flash.geom:Transform" />
+  </external-defs>
+</report>
