@@ -4,5 +4,6 @@ package org.axgl.input {
 	 */
 	public class AxMouseButton {
 		public static const LEFT:uint = 0;
+		public static const RIGHT:uint = 1;
 	}
 }

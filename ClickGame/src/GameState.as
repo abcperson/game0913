@@ -3,7 +3,11 @@ package  {
 	import org.axgl.AxGroup;
 	import org.axgl.AxRect;
 	import org.axgl.AxState;
+	import org.axgl.particle.AxParticleEffect;
+	import org.axgl.particle.AxParticleSystem;
+	import org.axgl.render.AxBlendMode;
 	import org.axgl.tilemap.AxTilemap;
+	import org.axgl.util.AxRange;
 	
 	/**
 	 * ...
@@ -24,17 +28,30 @@ package  {
 		private var enemies:AxGroup;	//敌人
 		private var player:Player;		//自己
 		
+		/** Player bullets group */
+		public var playerBullets:AxGroup = new AxGroup;
+		
+		/**
+		 * All particles. 
+		 */
+		public var particles:AxGroup;
+		
 		public function GameState() {
 			
 		}
 		
 		override public function create():void {
 			super.create();
+			GameConst.game = this;
 			
 			// Load our tilemap
 			tilemap = new AxTilemap().build(Resource.MAP, Resource.TILES, 24, 24);
 			this.add(tilemap);
-			GameConst.tileMap = tilemap;
+			
+			add(particles = new AxGroup);
+			
+			// Add player bullets group, which we will collide with the enemies group
+			this.add(playerBullets);
 			
 			// Create our player
 			player = new Player(40, 60);
@@ -53,6 +70,16 @@ package  {
 			
 			entities = new AxGroup;
 			entities.add(player).add(enemies);
+			
+			
+			var shadow:AxParticleEffect = new AxParticleEffect("shadow", Resource.STAR, 5);
+			shadow.xVelocity = new AxRange(0, 0);
+			shadow.yVelocity = new AxRange(0, 0);
+			shadow.lifetime = new AxRange(0.1, 0.1);
+			shadow.startAlpha = new AxRange(0.5, 0.5);
+			shadow.endAlpha = new AxRange(0, 0);
+			shadow.blend = AxBlendMode.PARTICLE;
+			particles.add(AxParticleSystem.register(shadow));
 		}
 		
 		override public function update():void {
@@ -60,6 +87,10 @@ package  {
 			
 			// Collide all the entities with the tilemap
 			Ax.collide(entities, tilemap);
+			
+			if (player.velocity.x != 0 || player.velocity.y != 0) {
+				AxParticleSystem.emit("shadow", player.x, player.y);
+			}
 		}
 	}
 

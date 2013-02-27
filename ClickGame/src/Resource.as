@@ -13,6 +13,8 @@ package  {
 		[Embed(source = "res/tiles.png")]
 		public static const TILES:Class;
 		
+		[Embed(source="res/bullet.png")]
+		public static const BULLET:Class;
 	}
 
 }

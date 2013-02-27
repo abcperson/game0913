@@ -351,6 +351,8 @@ package org.axgl {
 			mouse = new AxMouse;
 			stage.addEventListener(MouseEvent.MOUSE_DOWN, mouse.onMouseDown);
 			stage.addEventListener(MouseEvent.MOUSE_UP, mouse.onMouseUp);
+			stage.addEventListener(MouseEvent.RIGHT_MOUSE_DOWN, mouse.onRightMouseDown);
+			stage.addEventListener(MouseEvent.RIGHT_MOUSE_UP, mouse.onRightMouseUp);
 			
 			// Bind touch evenets
 			stage.addEventListener(TouchEvent.TOUCH_BEGIN, onTouchBegin);
