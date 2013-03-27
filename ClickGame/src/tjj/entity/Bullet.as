@@ -1,7 +1,8 @@
-package  {
-	import org.axgl.Ax;
+package tjj.entity{
 	import org.axgl.AxGroup;
 	import org.axgl.AxSprite;
+	import tjj.util.GameConst;
+	import tjj.util.Resource;
 	
 	/**
 	 * ...

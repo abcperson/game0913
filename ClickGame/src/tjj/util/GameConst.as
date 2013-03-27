@@ -1,5 +1,6 @@
-package  {
+package tjj.util {
 	import flash.geom.Point;
+	import tjj.state.GameState;
 	
 	/**
 	 * ...

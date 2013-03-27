@@ -1,4 +1,4 @@
-package  {
+package tjj.state{
 	import org.axgl.AxState;
 	
 	/**

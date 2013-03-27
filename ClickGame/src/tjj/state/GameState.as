@@ -1,4 +1,5 @@
-package  {
+package tjj.state{
+	import flash.geom.Point;
 	import org.axgl.Ax;
 	import org.axgl.AxGroup;
 	import org.axgl.AxRect;
@@ -8,6 +9,10 @@ package  {
 	import org.axgl.render.AxBlendMode;
 	import org.axgl.tilemap.AxTilemap;
 	import org.axgl.util.AxRange;
+	import tjj.entity.Enemy;
+	import tjj.entity.Player;
+	import tjj.util.GameConst;
+	import tjj.util.Resource;
 	
 	/**
 	 * ...
@@ -64,22 +69,25 @@ package  {
 			enemies = new AxGroup();
 			add(enemies);
 			
-			for (var i:int = 0; i < 4; i++) {
-				enemies.add(new Enemy());
-			}
+			//for (var i:int = 0; i < 4; i++) {
+				//enemies.add(new Enemy(100, 100));
+			//}
+			var enemy:Enemy = new Enemy(100, 100);
+			enemy.checks([new Point(200, 100),new Point(400, 100)]);
+			enemies.add(enemy);
 			
 			entities = new AxGroup;
 			entities.add(player).add(enemies);
 			
 			
-			var shadow:AxParticleEffect = new AxParticleEffect("shadow", Resource.STAR, 5);
-			shadow.xVelocity = new AxRange(0, 0);
-			shadow.yVelocity = new AxRange(0, 0);
-			shadow.lifetime = new AxRange(0.1, 0.1);
-			shadow.startAlpha = new AxRange(0.5, 0.5);
-			shadow.endAlpha = new AxRange(0, 0);
-			shadow.blend = AxBlendMode.PARTICLE;
-			particles.add(AxParticleSystem.register(shadow));
+			//var shadow:AxParticleEffect = new AxParticleEffect("shadow", Resource.ROLE, 5);
+			//shadow.xVelocity = new AxRange(0, 0);
+			//shadow.yVelocity = new AxRange(0, 0);
+			//shadow.lifetime = new AxRange(0.1, 0.1);
+			//shadow.startAlpha = new AxRange(0.5, 0.5);
+			//shadow.endAlpha = new AxRange(0, 0);
+			//shadow.blend = AxBlendMode.PARTICLE;
+			//particles.add(AxParticleSystem.register(shadow));
 		}
 		
 		override public function update():void {
@@ -87,10 +95,11 @@ package  {
 			
 			// Collide all the entities with the tilemap
 			Ax.collide(entities, tilemap);
+			//Ax.collide(player, enemies);
 			
-			if (player.velocity.x != 0 || player.velocity.y != 0) {
-				AxParticleSystem.emit("shadow", player.x, player.y);
-			}
+			//if (player.velocity.x != 0 || player.velocity.y != 0) {
+				//AxParticleSystem.emit("shadow", player.x, player.y);
+			//}
 		}
 	}
 

@@ -1,4 +1,4 @@
-package  {
+package tjj.entity {
 	import flash.geom.Point;
 	import org.axgl.Ax;
 	import org.axgl.AxSprite;
@@ -6,6 +6,9 @@ package  {
 	import org.axgl.input.AxMouseButton;
 	import org.axgl.particle.AxParticleEffect;
 	import org.axgl.util.AxRange;
+	import tjj.util.AIUtil;
+	import tjj.util.GameConst;
+	import tjj.util.Resource;
 	
 	/**
 	 * ...
@@ -22,8 +25,18 @@ package  {
 		public function Player(x:uint, y:uint) {
 			GameConst.targetPoint.x = x;
 			GameConst.targetPoint.y = y;
+			super(x, y, Resource.ROLE, 32, 49);
 			
-			super(x, y, Resource.STAR, 23, 23);
+			scale.x = 1.5;
+			scale.y = 1.5;
+			//bounds(28, 12, 2, 38);
+			bounds(42, 18, 3, 57);
+			
+			addAnimation("right", [0, 1, 2, 3], 5, true);
+			addAnimation("up", [4, 5, 6, 7], 5, true);
+			addAnimation("left", [8, 9, 10, 11], 5, true);
+			addAnimation("down", [12, 13, 14, 15], 5, true);
+			
 		}
 		
 		override public function update():void {
@@ -32,22 +45,23 @@ package  {
 				GameConst.targetPoint.y = Ax.mouse.y;
 			}
 			
-			if (AxU.distance(x,y, GameConst.targetPoint.x - width / 2, GameConst.targetPoint.y - height / 2) > speed * Ax.dt) {
-				var angle:Number = AxU.getAngle(x , y , GameConst.targetPoint.x - width / 2, GameConst.targetPoint.y - height / 2);
-				
-				velocity.x = speed * Math.cos(angle);
-				velocity.y = speed * Math.sin(angle);
-			} else {
-				velocity.x = velocity.y = 0;
-				x = GameConst.targetPoint.x - width / 2;
-				y = GameConst.targetPoint.y - height / 2;
-			}
+			AIUtil.walkTo(this, GameConst.targetPoint, speed, width / 2, height / 2);
 			
 			if (Ax.mouse.down(AxMouseButton.RIGHT) && fireDelay <= 0) {
 				shoot();
 				fireDelay = 0.6;
 			}
 			fireDelay -= Ax.dt;
+			
+			if (velocity.y < 0 && Math.abs(velocity.y) > Math.abs(velocity.x) ) {
+				animate("up");
+			}else if (velocity.y > 0 && Math.abs(velocity.y) > Math.abs(velocity.x) ) {
+				animate("down");
+			}else if (velocity.x > 0 && Math.abs(velocity.y) < Math.abs(velocity.x) ) {
+				animate("right");
+			}else if (velocity.x < 0 && Math.abs(velocity.y) < Math.abs(velocity.x) ) {
+				animate("left");
+			}
 			
 			super.update();
 		}

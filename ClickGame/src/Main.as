@@ -1,10 +1,12 @@
 package {
-	import flash.display.Sprite;
 	import flash.events.Event;
 	import flash.net.URLLoader;
 	import flash.net.URLRequest;
 	import org.axgl.Ax;
 	import org.axgl.render.AxColor;
+	import tjj.state.GameState;
+	import tjj.state.TitleState;
+	import tjj.util.Resource;
 	
 	/**
 	 * ...
