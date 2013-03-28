@@ -31,7 +31,7 @@ package tjj.state{
 		public var entities:AxGroup;
 		
 		private var enemies:AxGroup;	//敌人
-		private var player:Player;		//自己
+		public var player:Player;		//自己
 		
 		/** Player bullets group */
 		public var playerBullets:AxGroup = new AxGroup;

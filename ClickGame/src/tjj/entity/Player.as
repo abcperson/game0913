@@ -40,7 +40,7 @@ package tjj.entity {
 		}
 		
 		override public function update():void {
-			if (Ax.mouse.pressed(AxMouseButton.LEFT)) {
+			if (Ax.mouse.down(AxMouseButton.LEFT)) {
 				GameConst.targetPoint.x = Ax.mouse.x;
 				GameConst.targetPoint.y = Ax.mouse.y;
 			}

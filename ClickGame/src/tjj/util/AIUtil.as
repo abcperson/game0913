@@ -27,6 +27,11 @@ package tjj.util {
 			}
 		}
 		
+		//获取两个物体间的距离
+		public static function getCenterDisOfEntitys(a:AxEntity, b:AxEntity):Number {
+			return AxU.distance(a.center.x, a.center.y, b.center.x, b.center.y);
+		}
+		
 		//限制物体在某个区域
 		public static function boundsEntity(entity:AxEntity, boundX:Number, boundY:Number, boundWidth:Number, boundHeight:Number):void {
 			if (entity.x < boundX) {
